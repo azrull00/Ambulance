@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.ambulan24jammagelang.my.id/sitemap.xml 
