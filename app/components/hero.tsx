@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl sm:text-2xl mb-8 text-gray-200">
-            Professional Medical Transport Available Anytime, Anywhere
+          Transportasi Medis Profesional Tersedia Kapan Saja, Di Mana Saja
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -61,12 +61,12 @@ const Hero = () => {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 max-w-3xl mx-auto ">
             {[
               { number: '24/7', text: 'Service Available' },
               { number: '15min', text: 'Response Time' },
-              { number: '100+', text: 'Medical Staff' },
-              { number: '50+', text: 'Ambulances' },
+              { number: '1+ year', text: 'Experience' },
+              { number: '20+', text: 'Ambulances' },
             ].map((stat, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-4">
                 <div className="text-2xl sm:text-3xl font-bold">{stat.number}</div>

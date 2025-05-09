@@ -23,7 +23,7 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo and Company Name */}
+          {/* Logo dan Nama Perusahaan */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
               <span className="text-2xl font-extrabold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent group-hover:from-red-500 group-hover:to-red-300 transition-all duration-300">
@@ -33,13 +33,13 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Navigasi Desktop */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {['Home', 'Services', 'About', 'Contact'].map((item) => (
+              {['Beranda', 'Layanan', 'Tentang', 'Kontak'].map((item) => (
                 <Link
                   key={item}
-                  href={item === 'Home' ? '/' : `#${item.toLowerCase()}`}
+                  href={item === 'Beranda' ? '/' : `#${item.toLowerCase()}`}
                   className="relative text-gray-700 hover:text-red-600 transition-colors text-sm uppercase font-medium tracking-wider py-2"
                 >
                   <span className="relative">
@@ -65,12 +65,12 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Tombol menu mobile */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors focus:outline-none"
-              aria-label="Toggle menu"
+              aria-label="Buka menu"
             >
               <div className="relative w-6 h-6">
                 <span className={`absolute left-0 block w-full h-0.5 bg-current transform transition-all duration-300 ${
@@ -88,7 +88,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Navigasi Mobile */}
       <div
         className={`transform transition-all duration-300 ease-in-out ${
           isOpen
@@ -97,10 +97,10 @@ const Navbar = () => {
         } md:hidden fixed top-20 right-0 bottom-0 w-full bg-white/95 backdrop-blur-lg`}
       >
         <div className="px-4 pt-4 pb-6 space-y-4">
-          {['Home', 'Services', 'About', 'Contact'].map((item) => (
+          {['Beranda', 'Layanan', 'Tentang', 'Kontak'].map((item) => (
             <Link
               key={item}
-              href={item === 'Home' ? '/' : `#${item.toLowerCase()}`}
+              href={item === 'Beranda' ? '/' : `#${item.toLowerCase()}`}
               className="block px-4 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors text-sm uppercase font-medium tracking-wider"
               onClick={() => setIsOpen(false)}
             >
