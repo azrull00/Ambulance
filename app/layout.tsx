@@ -5,14 +5,14 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ambulan 24 Jam Magelang | Layanan Ambulans Darurat",
-  description: "Layanan ambulan 24 jam di Magelang dan sekitarnya. Siap melayani keadaan darurat dengan respons cepat. Hubungi kami sekarang untuk bantuan medis darurat.",
-  keywords: "ambulan magelang, ambulan 24 jam magelang, layanan ambulans magelang, ambulance emergency magelang, ambulan rumah sakit magelang, ambulan darurat magelang",
+  title: "Ambulan 24 Jam Magelang & Jawa Tengah | Layanan Ambulans Darurat",
+  description: "Layanan ambulan 24 jam di Magelang dan Jawa Tengah. Melayani keadaan darurat dengan respons cepat di seluruh wilayah Jawa Tengah. Siap siaga 24/7 untuk bantuan medis darurat.",
+  keywords: "ambulan magelang, ambulan 24 jam magelang, ambulan jawa tengah, ambulan 24 jam jawa tengah, layanan ambulans magelang, ambulance emergency magelang, ambulan rumah sakit magelang, ambulan darurat magelang, ambulan darurat jawa tengah, ambulan rumah sakit jawa tengah, layanan ambulans jawa tengah, ambulance emergency jawa tengah",
   openGraph: {
-    title: "Ambulan 24 Jam Magelang | Layanan Ambulans Darurat",
-    description: "Layanan ambulan 24 jam di Magelang dan sekitarnya. Siap melayani keadaan darurat dengan respons cepat.",
+    title: "Ambulan 24 Jam Magelang & Jawa Tengah | Layanan Ambulans Darurat",
+    description: "Layanan ambulan 24 jam di Magelang dan Jawa Tengah. Melayani keadaan darurat dengan respons cepat di seluruh wilayah Jawa Tengah.",
     url: "https://www.ambulan24jammagelang.my.id",
-    siteName: "Ambulan Siaga Magelang",
+    siteName: "Ambulan 24 Jam Magelang & Jawa Tengah",
     locale: "id_ID",
     type: "website",
     images: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "https://www.ambulan24jammagelang.my.id/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ambulan 24 Jam Magelang",
+        alt: "Ambulan 24 Jam Magelang dan Jawa Tengah",
       }
     ],
   },
@@ -54,11 +54,14 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="geo.region" content="ID-JT" />
-        <meta name="geo.placename" content="Magelang" />
+        <meta name="geo.placename" content="Magelang, Jawa Tengah" />
         <meta name="geo.position" content="-7.4797;110.2177" />
         <meta name="ICBM" content="-7.4797, 110.2177" />
         <meta name="google" content="notranslate" />
         <meta name="format-detection" content="telephone=yes" />
+        <meta name="coverage" content="Magelang, Jawa Tengah, Indonesia" />
+        <meta name="target" content="Indonesia" />
+        <meta name="area" content="Jawa Tengah" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
