@@ -15,10 +15,10 @@ const Contact = () => {
       address: "Tangerang, Banten 19120",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2868122201244!2d106.65118621476885!3d-6.127516995559667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a02695aaccb09%3A0x61dee98159fa3fe8!2sBandara%20Internasional%20Soekarno-Hatta!5e0!3m2!1sid!2sid!4v1647827938045!5m2!1sid!2sid"
     },
-    semarang: {
-      name: "Bandara Ahmad Yani Semarang",
-      address: "Jl. Puad Ahmad Yani, Semarang 50145",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1995849118623!2d110.37560067497487!3d-6.979356093040773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c947764ce31%3A0xf8c5bd4d4c7a9f0!2sBandar%20Udara%20Internasional%20Jenderal%20Ahmad%20Yani!5e0!3m2!1sid!2sid!4v1710841831133!5m2!1sid!2sid"
+    magelang: {
+      name: "Ambulan 24 Jam Magelang",
+      address: "Jl. Gatot Subroto No.59, Magelang, Jawa Tengah 56172",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63283.33037738815!2d110.17462580895385!3d-7.479719694843165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8f6e30f69087%3A0x3027a76e356c0!2sMagelang%2C%20Magelang%20City%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1710842150317!5m2!1sen!2sid"
     },
     yogya: {
       name: "Bandara Yogyakarta International",
@@ -58,11 +58,11 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="hover:text-red-600 transition-colors"
             >
-              Hubungi Kami
+              Ambulan 24 Jam Magelang
             </a>
           </h2>
           <p className="text-xl text-gray-600">
-            Siap melayani 24/7 untuk keadaan darurat
+            Siap melayani 24/7 untuk keadaan darurat di Magelang dan sekitarnya
           </p>
         </div>
 
@@ -129,8 +129,9 @@ const Contact = () => {
                   Jam Operasional
                 </h4>
                 <div className="text-gray-600">
-                  <p>Layanan Darurat: 24/7</p>
+                  <p>Layanan Ambulan Darurat Magelang: 24 Jam / 7 Hari</p>
                   <p>Kantor Administrasi: Senin-Jumat 09.00-17.00</p>
+                  <p className="mt-2 text-sm">Melayani area: Magelang Kota, Magelang Utara, Magelang Selatan, dan sekitarnya</p>
                 </div>
               </div>
             </div>
