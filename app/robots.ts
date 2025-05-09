@@ -7,32 +7,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: [
-          '/',
-          '/*.html',
-          '/sitemap.xml',
-          '/#about',
-          '/#services',
-          '/#contact',
-          '/#testimonials',
-          '/#gallery'
-        ],
-        disallow: [
-          '/private/',
-          '/admin/',
-          '/*.json$',
-          '/*?*'
-        ]
-      },
-      {
-        userAgent: 'Googlebot',
         allow: '/',
-        crawlDelay: 1
-      },
-      {
-        userAgent: 'Bingbot',
-        allow: '/',
-        crawlDelay: 1
+        disallow: ['/private/', '/admin/']
       }
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
