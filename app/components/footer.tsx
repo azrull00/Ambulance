@@ -74,9 +74,9 @@ const Footer = () => {
                 Hubungi Sekarang
               </a>
               <p className="text-gray-400">Tersedia 24/7</p>
-              <p className="text-gray-400">info@ambulanservice.com</p>
+              {/* <p className="text-gray-400">info@ambulanservice.com</p>
               <p className="text-gray-400">Jl. Raya Utama No. 123</p>
-              <p className="text-gray-400">Kota, Indonesia 12345</p>
+              <p className="text-gray-400">Kota, Indonesia 12345</p> */}
             </div>
           </div>
         </div>
@@ -94,9 +94,9 @@ const Footer = () => {
               <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Syarat Layanan
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              {/* <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Kebijakan Cookie
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

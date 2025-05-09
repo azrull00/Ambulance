@@ -1,21 +1,52 @@
 'use client';
 import { useState } from 'react';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
-    message: ''
+    message: '',
+    location: 'jakarta' // default location
   });
+
+  const locations = {
+    jakarta: {
+      name: "Bandara Soekarno-Hatta Jakarta",
+      address: "Tangerang, Banten 19120",
+      center: { lat: -6.1275, lng: 106.6537 }
+    },
+    semarang: {
+      name: "Bandara Ahmad Yani Semarang",
+      address: "Jl. Puad Ahmad Yani, Semarang 50145",
+      center: { lat: -6.9732, lng: 110.3750 }
+    },
+    yogya: {
+      name: "Bandara Yogyakarta International",
+      address: "Jl. Yogyakarta International Airport, Kulon Progo",
+      center: { lat: -7.9052, lng: 110.0574 }
+    }
+  };
+
+  const mapContainerStyle = {
+    width: '100%',
+    height: '300px',
+    borderRadius: '0.5rem'
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    const locationData = locations[formData.location as keyof typeof locations];
+    const whatsappMessage = `Nama: ${formData.name}%0A` +
+      `Telepon: ${formData.phone}%0A` +
+      `Lokasi: ${locationData.name}%0A` +
+      `Alamat: ${locationData.address}%0A` +
+      `Pesan: ${formData.message}`;
+    
+    window.open(`https://wa.me/6281225852454?text=${whatsappMessage}`, '_blank');
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -28,7 +59,14 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Hubungi Kami
+            <a
+              href="https://wa.me/6281225852454"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-red-600 transition-colors"
+            >
+              Hubungi Kami
+            </a>
           </h2>
           <p className="text-xl text-gray-600">
             Siap melayani 24/7 untuk keadaan darurat
@@ -60,24 +98,37 @@ const Contact = () => {
 
               <div className="space-y-4">
                 <h4 className="text-xl font-semibold text-gray-900">
-                  Cara Lain Menghubungi Kami
+                  Lokasi Kami
                 </h4>
-                <div className="flex items-start space-x-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <div>
-                    <p className="text-gray-600">Jl. Raya Utama No. 123</p>
-                    <p className="text-gray-600">Kota, Indonesia 12345</p>
-                  </div>
+                <LoadScript googleMapsApiKey="AIzaSyDHJYDpg6ZVqQfXGJVYbXhBGxNjFHXYtRs">
+                  <GoogleMap
+                    mapContainerStyle={mapContainerStyle}
+                    center={locations[formData.location as keyof typeof locations].center}
+                    zoom={15}
+                  >
+                    <Marker
+                      position={locations[formData.location as keyof typeof locations].center}
+                    />
+                  </GoogleMap>
+                </LoadScript>
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  {Object.entries(locations).map(([key, location]) => (
+                    <button
+                      key={key}
+                      onClick={() => setFormData(prev => ({ ...prev, location: key }))}
+                      className={`p-2 rounded-lg text-sm font-medium transition-colors ${
+                        formData.location === key
+                          ? 'bg-red-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {location.name}
+                    </button>
+                  ))}
                 </div>
-                <div className="flex items-start space-x-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-gray-600">info@ambulanservice.com</p>
-                </div>
+                <p className="text-gray-600">
+                  {locations[formData.location as keyof typeof locations].address}
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -108,21 +159,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Alamat Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-black"
                   required
                 />
               </div>
@@ -136,9 +173,28 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-black"
                   required
                 />
+              </div>
+              <div>
+                <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
+                  Pilih Lokasi
+                </label>
+                <select
+                  id="location"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-black"
+                  required
+                >
+                  {Object.entries(locations).map(([key, location]) => (
+                    <option key={key} value={key}>
+                      {location.name}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -150,7 +206,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-black"
                   required
                 />
               </div>
@@ -158,7 +214,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors"
               >
-                Kirim Pesan
+                Kirim Pesan via WhatsApp
               </button>
             </form>
           </div>
