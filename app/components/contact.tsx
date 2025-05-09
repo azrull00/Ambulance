@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,24 +13,18 @@ const Contact = () => {
     jakarta: {
       name: "Bandara Soekarno-Hatta Jakarta",
       address: "Tangerang, Banten 19120",
-      center: { lat: -6.1275, lng: 106.6537 }
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2868122201244!2d106.65118621476885!3d-6.127516995559667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a02695aaccb09%3A0x61dee98159fa3fe8!2sBandara%20Internasional%20Soekarno-Hatta!5e0!3m2!1sid!2sid!4v1647827938045!5m2!1sid!2sid"
     },
     semarang: {
       name: "Bandara Ahmad Yani Semarang",
       address: "Jl. Puad Ahmad Yani, Semarang 50145",
-      center: { lat: -6.9732, lng: 110.3750 }
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1995849118623!2d110.37560067497487!3d-6.979356093040773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c947764ce31%3A0xf8c5bd4d4c7a9f0!2sBandar%20Udara%20Internasional%20Jenderal%20Ahmad%20Yani!5e0!3m2!1sid!2sid!4v1710841831133!5m2!1sid!2sid"
     },
     yogya: {
       name: "Bandara Yogyakarta International",
       address: "Jl. Yogyakarta International Airport, Kulon Progo",
-      center: { lat: -7.9052, lng: 110.0574 }
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.4647989793186!2d110.05522731478037!3d-7.905199994291492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7ae11340a7c4b1%3A0x4027a76e35477e0!2sBandar%20Udara%20Internasional%20Yogyakarta!5e0!3m2!1sid!2sid!4v1647828087654!5m2!1sid!2sid"
     }
-  };
-
-  const mapContainerStyle = {
-    width: '100%',
-    height: '300px',
-    borderRadius: '0.5rem'
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -100,17 +93,17 @@ const Contact = () => {
                 <h4 className="text-xl font-semibold text-gray-900">
                   Lokasi Kami
                 </h4>
-                <LoadScript googleMapsApiKey="AIzaSyDHJYDpg6ZVqQfXGJVYbXhBGxNjFHXYtRs">
-                  <GoogleMap
-                    mapContainerStyle={mapContainerStyle}
-                    center={locations[formData.location as keyof typeof locations].center}
-                    zoom={15}
-                  >
-                    <Marker
-                      position={locations[formData.location as keyof typeof locations].center}
-                    />
-                  </GoogleMap>
-                </LoadScript>
+                <div className="w-full h-[300px] rounded-lg overflow-hidden">
+                  <iframe
+                    src={locations[formData.location as keyof typeof locations].mapUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
                 <div className="grid grid-cols-3 gap-4 mt-4">
                   {Object.entries(locations).map(([key, location]) => (
                     <button
