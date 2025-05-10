@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+Allow: /sitemap.xsl
 
-Sitemap: https://www.ambulan24jammagelang.my.id/sitemap.xml 
+# Disallow admin and private routes
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.ambulan24jammagelang.my.id/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10 
