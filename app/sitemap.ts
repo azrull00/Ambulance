@@ -1,19 +1,12 @@
-import { NextResponse } from 'next/server'
+import { MetadataRoute } from 'next'
 
-export async function GET() {
-  const body = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>https://ambulan24jammagelang.my.id/</loc>
-      <lastmod>${new Date().toISOString()}</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-    </url>
-  </urlset>`
-
-  return new NextResponse(body, {
-    headers: {
-      'Content-Type': 'application/xml',
-    },
-  })
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: 'https://www.ambulan24jammagelang.my.id/',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    }
+  ]
 }
