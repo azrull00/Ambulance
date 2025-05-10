@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.ambulan24jammagelang.my.id'
+  const baseUrl = 'https://ambulan24jammagelang.my.id'
 
   return [
     {
@@ -11,4 +11,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     }
   ]
-} 
+}
