@@ -22,9 +22,9 @@ const Contact = () => {
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63283.33037738815!2d110.17462580895385!3d-7.479719694843165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8f6e30f69087%3A0x3027a76e356c0!2sMagelang%2C%20Magelang%20City%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1710842150317!5m2!1sen!2sid"
     },
     yogya: {
-      name: "Bandara Yogyakarta International",
-      address: "Jl. Yogyakarta International Airport, Kulon Progo",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.4647989793186!2d110.05522731478037!3d-7.905199994291492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7ae11340a7c4b1%3A0x4027a76e35477e0!2sBandar%20Udara%20Internasional%20Yogyakarta!5e0!3m2!1sid!2sid!4v1647828087654!5m2!1sid!2sid"
+      name: "Kota Yogyakarta",
+      address: "Jl. Malioboro No. 1, Yogyakarta, Daerah Istimewa Yogyakarta",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1831871999997!2d110.3693!3d-7.7956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sMalioboro%2C%20Sosromenduran%2C%20Gedong%20Tengen%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1710842150317!5m2!1sen!2sid"
     }
   };
 
