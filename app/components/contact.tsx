@@ -17,7 +17,7 @@ const Contact = () => {
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2868122201244!2d106.65118621476885!3d-6.127516995559667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a02695aaccb09%3A0x61dee98159fa3fe8!2sBandara%20Internasional%20Soekarno-Hatta!5e0!3m2!1sid!2sid!4v1647827938045!5m2!1sid!2sid"
     },
     magelang: {
-      name: "Ambulan 24 Jam Magelang",
+      name: "Kota Magelang",
       address: "Jl. Gatot Subroto No.59, Magelang, Jawa Tengah 56172",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63283.33037738815!2d110.17462580895385!3d-7.479719694843165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8f6e30f69087%3A0x3027a76e356c0!2sMagelang%2C%20Magelang%20City%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1710842150317!5m2!1sen!2sid"
     },
