@@ -130,8 +130,8 @@ const Contact = () => {
                 </h4>
                 <div className="text-gray-600">
                   <p>Layanan Ambulan Darurat Magelang: 24 Jam / 7 Hari</p>
-                  <p>Kantor Administrasi: Senin-Jumat 09.00-17.00</p>
-                  <p className="mt-2 text-sm">Melayani area: Magelang Kota, Magelang Utara, Magelang Selatan, dan sekitarnya</p>
+                  <p>Kantor Administrasi: Senin-Minggu 24 Jam</p>
+                  <p className="mt-2 text-sm">Melayani area: Magelang , Semarang , Solo dan Yogyakarta</p>
                 </div>
               </div>
             </div>

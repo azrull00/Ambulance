@@ -9,31 +9,6 @@ function generateSitemapXml(): string {
       url: baseUrl,
       changefreq: 'daily',
       priority: 1.0
-    },
-    {
-      url: `${baseUrl}/#about`,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/#services`,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/#testimonials`,
-      changefreq: 'weekly',
-      priority: 0.7
-    },
-    {
-      url: `${baseUrl}/#gallery`,
-      changefreq: 'weekly',
-      priority: 0.7
     }
   ]
 
