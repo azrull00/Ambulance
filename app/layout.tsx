@@ -36,9 +36,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification code
-  },
+  // verification: {
+  //   google: "your-google-verification-code", // Add your Google Search Console verification code
+  // },
   alternates: {
     canonical: "https://www.ambulan24jammagelang.my.id",
   },
