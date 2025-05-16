@@ -8,11 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Ambulan 24 Jam Magelang Terdekat | Layanan Ambulans Darurat",
   description: "Layanan ambulan 24 jam terdekat di Magelang dan sekitarnya. Melayani keadaan darurat dengan respons cepat di Magelang, Yogyakarta, Semarang, dan Solo. Siap siaga 24/7 untuk bantuan medis darurat.",
-  keywords: "ambulan magelang terdekat, ambulan 24 jam magelang, ambulan jawa tengah, ambulan 24 jam jawa tengah, layanan ambulans magelang, ambulance emergency magelang, ambulan rumah sakit magelang, ambulan darurat magelang, ambulan darurat jawa tengah, ambulan rumah sakit jawa tengah, layanan ambulans jawa tengah, ambulance emergency jawa tengah, ambulan yogyakarta, ambulan semarang, ambulan solo",
+  keywords: "ambulan magelang terdekat, ambulan 24 jam magelang, ambulan jawa tengah, ambulan 24 jam jawa tengah, layanan ambulans magelang, ambulance emergency magelang, ambulan rumah sakit magelang, ambulan darurat magelang, ambulan darurat jawa tengah, ambulan rumah sakit jawa tengah, layanan ambulans jawa tengah, ambulance emergency jawa tengah,ambulan terdekat , ambulan yogyakarta, ambulan semarang, ambulan solo ,ambulan darurat terdekat ,  ambulan darurat sekitar",
   openGraph: {
     title: "Ambulan 24 Jam Magelang Terdekat | Layanan Ambulans Darurat",
     description: "Layanan ambulan 24 jam terdekat di Magelang dan sekitarnya. Melayani keadaan darurat dengan respons cepat di Magelang, Yogyakarta, Semarang, dan Solo.",
-    url: "https://www.ambulan24jammagelang.my.id",
+    url: "https://www.ambulan24jammagelang.my.id",  
     siteName: "Ambulan 24 Jam Magelang",
     locale: "id_ID",
     type: "website",
