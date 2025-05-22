@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ambulan 24 Jam Magelang Terdekat | Layanan Ambulans Darurat",
     description: "Layanan ambulan 24 jam terdekat di Magelang dan sekitarnya. Melayani keadaan darurat dengan respons cepat di Magelang, Yogyakarta, Semarang, dan Solo.",
-    url: "https://www.ambulan24jammagelang.my.id",  
+    url: "https://www.ambulan24jammagelang.my.id",    
     siteName: "Ambulan 24 Jam Magelang",
     locale: "id_ID",
     type: "website",
